@@ -32,8 +32,10 @@ export default function MenuCategories() {
                 src={cat.image}
                 alt={`${cat.name} category`}
                 fill
-                sizes="(max-width: 768px) 50vw, 20vw"
+                sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 20vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-4">

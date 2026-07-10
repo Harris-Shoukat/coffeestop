@@ -86,6 +86,8 @@ function MenuContent() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                       className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      loading="lazy"
+                      decoding="async"
                     />
                     {item.tag && (
                       <span className="absolute left-3 top-3 rounded-full bg-cream-base/90 px-3 py-1 text-xs font-medium text-espresso-ink backdrop-blur-sm">

@@ -33,6 +33,8 @@ export default function InstagramFeed() {
                 fill
                 sizes="(max-width: 768px) 33vw, 16vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           ))}

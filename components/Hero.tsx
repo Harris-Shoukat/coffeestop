@@ -9,7 +9,7 @@ export default function Hero() {
       id="home"
       className="relative w-full overflow-hidden bg-cream-base"
     >
-      <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-32">
+      <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 py-20 md:grid-cols-2 md:py-14">
         <div className="flex flex-col gap-6">
           <span className="inline-block w-fit rounded-full bg-oak-accent/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-widest text-oak-accent">
             Welcome to Coffeestop
@@ -46,6 +46,7 @@ export default function Hero() {
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
             preload
+            fetchPriority="high"
           />
         </div>
       </div>

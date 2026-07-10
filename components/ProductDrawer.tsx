@@ -63,6 +63,8 @@ export default function ProductDrawer() {
                 fill
                 sizes="(max-width: 768px) 100vw, 400px"
                 className="object-cover"
+                loading="lazy"
+                decoding="async"
               />
             </div>
             <p className="mb-6 text-base leading-relaxed text-on-surface-variant">

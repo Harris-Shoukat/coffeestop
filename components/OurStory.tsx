@@ -14,6 +14,8 @@ export default function OurStory() {
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
+            loading="lazy"
+            decoding="async"
           />
         </div>
         <div className="flex flex-col gap-6">
