@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=optional");
+@import "tailwindcss";
+
+@theme {
+  --color-cream-base: #FDFBF7;
+  --color-espresso-ink: #231A16;
+  --color-oak-accent: #C5A059;
+  --color-latte-tan: #C4A484;
+  --color-surface-container-low: #f5f3ef;
+  --color-surface-container: #efeeea;
+  --color-surface-variant: #e4e2de;
+  --color-on-surface-variant: #4e4541;
+  --spacing-section-gap: 120px;
+  --spacing-container-max: 1280px;
+  --spacing-gutter: 24px;
+  --font-serif: var(--font-playfair), serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
+}
+
+.material-symbols-outlined {
+  font-family: "Material Symbols Outlined";
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: "liga";
+  -webkit-font-smoothing: antialiased;
+}
