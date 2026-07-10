@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="w-full bg-espresso-ink">
@@ -30,30 +32,30 @@ export default function Footer() {
             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-oak-accent">
               Quick Links
             </span>
-            <a
+            <Link
               href="#home"
               className="text-sm text-cream-base/60 transition-colors hover:text-cream-base"
             >
               Home
-            </a>
-            <a
+            </Link>
+            <Link
               href="#menu"
               className="text-sm text-cream-base/60 transition-colors hover:text-cream-base"
             >
               Menu
-            </a>
-            <a
+            </Link>
+            <Link
               href="#story"
               className="text-sm text-cream-base/60 transition-colors hover:text-cream-base"
             >
               Our Story
-            </a>
-            <a
+            </Link>
+            <Link
               href="#contact"
               className="text-sm text-cream-base/60 transition-colors hover:text-cream-base"
             >
               Contact
-            </a>
+            </Link>
           </div>
           <div className="flex flex-col gap-4">
             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-oak-accent">
@@ -85,15 +87,15 @@ export default function Footer() {
         <div className="mx-auto flex max-w-[1280px] flex-col items-center justify-between gap-2 px-6 py-6 text-xs text-cream-base/40 md:flex-row">
           <span>&copy; {new Date().getFullYear()} Coffeestop. All rights reserved.</span>
           <div className="flex gap-4">
-            <a href="#" className="transition-colors hover:text-cream-base/60">
+            <Link href="#" className="transition-colors hover:text-cream-base/60">
               Instagram
-            </a>
-            <a href="#" className="transition-colors hover:text-cream-base/60">
+            </Link>
+            <Link href="#" className="transition-colors hover:text-cream-base/60">
               Twitter
-            </a>
-            <a href="#" className="transition-colors hover:text-cream-base/60">
+            </Link>
+            <Link href="#" className="transition-colors hover:text-cream-base/60">
               Facebook
-            </a>
+            </Link>
           </div>
         </div>
       </div>

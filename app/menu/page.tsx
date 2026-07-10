@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useMemo } from 'react'
+import { Suspense, useState, useMemo } from 'react'
 import Image from 'next/image'
+import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { categories, getCategoryProducts } from '@/lib/products'
@@ -9,8 +10,17 @@ import StarRating from '@/components/StarRating'
 import { useCart } from '@/context/CartContext'
 
 export default function MenuPage() {
+  return (
+    <Suspense>
+      <MenuContent />
+    </Suspense>
+  )
+}
+
+function MenuContent() {
+  const searchParams = useSearchParams()
   const { openDrawer } = useCart()
-  const [activeCategory, setActiveCategory] = useState('all')
+  const [activeCategory, setActiveCategory] = useState(searchParams.get('category') || 'all')
 
   const filtered = useMemo(
     () => getCategoryProducts(activeCategory),
