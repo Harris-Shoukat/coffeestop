@@ -1,5 +1,9 @@
+'use client'
+
 import Image from 'next/image'
+import { ArrowRight } from 'lucide-react'
 import StarRating from './StarRating'
+import { useCart } from '@/context/CartContext'
 
 const highlights = [
   {
@@ -41,6 +45,7 @@ const highlights = [
 ]
 
 export default function Highlights() {
+  const { openDrawer } = useCart()
   return (
     <section className="w-full bg-surface-container-low py-20 md:py-[120px]">
       <div className="mx-auto max-w-[1280px] px-6">
@@ -56,14 +61,15 @@ export default function Highlights() {
             className="mt-2 inline-flex items-center gap-2 rounded-full border border-espresso-ink/20 px-6 py-2.5 text-sm font-medium text-espresso-ink transition-colors hover:bg-espresso-ink hover:text-cream-base"
           >
             View All
-            <span className="material-symbols-outlined text-base">arrow_forward</span>
+            <ArrowRight className="h-4 w-4" />
           </a>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {highlights.map((item) => (
             <div
               key={item.name}
-              className="group relative flex flex-col overflow-hidden rounded-2xl bg-cream-base transition-shadow duration-300 hover:shadow-xl"
+              onClick={() => openDrawer(item)}
+              className="group relative flex flex-col overflow-hidden rounded-2xl bg-cream-base transition-shadow duration-300 hover:shadow-xl cursor-pointer"
             >
               <div className="relative aspect-[4/3] w-full overflow-hidden">
                 <Image
@@ -88,7 +94,7 @@ export default function Highlights() {
                   {item.description}
                 </p>
                 <span className="mt-auto pt-2 font-serif text-lg font-bold text-oak-accent">
-                  ₹{item.price}
+                  ${item.price}
                 </span>
               </div>
             </div>

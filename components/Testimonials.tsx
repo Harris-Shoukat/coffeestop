@@ -1,3 +1,5 @@
+import { Star } from 'lucide-react'
+
 const testimonials = [
   {
     name: 'Sarah M.',
@@ -7,18 +9,25 @@ const testimonials = [
     rating: 5,
   },
   {
-    name: 'Raj K.',
-    role: 'Regular Customer',
+    name: 'Emily R.',
+    role: 'Lifestyle Blogger',
     quote:
       'The ambiance is unmatched. I spend hours here working, and the cold brew keeps me going.',
     rating: 5,
   },
   {
-    name: 'Priya S.',
-    role: 'Graphic Designer',
+    name: 'Jake T.',
+    role: 'Marketing Manager',
     quote:
       'Their flat white is my morning ritual. The quality is consistently excellent, and the staff is always welcoming.',
     rating: 4,
+  },
+  {
+    name: 'Mike J.',
+    role: 'Software Engineer from Seattle',
+    quote:
+      'Finally found a coffee shop that rivals the best spots back home. The pour-over is next level — bold, clean, and absolutely delicious.',
+    rating: 5,
   },
 ]
 
@@ -34,7 +43,7 @@ export default function Testimonials() {
             What Our Community Says
           </h2>
         </div>
-        <div className="grid gap-6 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-4">
           {testimonials.map((t) => (
             <div
               key={t.name}
@@ -42,14 +51,14 @@ export default function Testimonials() {
             >
               <div className="flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span
+                  <Star
                     key={i}
-                    className={`material-symbols-outlined text-sm ${
+                    className={`h-4 w-4 ${
                       i < t.rating ? 'text-oak-accent' : 'text-cream-base/20'
                     }`}
-                  >
-                    star
-                  </span>
+                    fill={i < t.rating ? 'currentColor' : 'none'}
+                    strokeWidth={i < t.rating ? 0 : 1.5}
+                  />
                 ))}
               </div>
               <p className="flex-1 text-base leading-relaxed text-cream-base/80">

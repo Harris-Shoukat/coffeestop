@@ -6,8 +6,10 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { categories, getCategoryProducts } from '@/lib/products'
 import StarRating from '@/components/StarRating'
+import { useCart } from '@/context/CartContext'
 
 export default function MenuPage() {
+  const { openDrawer } = useCart()
   const [activeCategory, setActiveCategory] = useState('all')
 
   const filtered = useMemo(
@@ -64,7 +66,8 @@ export default function MenuPage() {
               {filtered.map((item) => (
                 <div
                   key={item.id}
-                  className="group flex flex-col overflow-hidden rounded-2xl bg-cream-base transition-shadow duration-300 hover:shadow-xl"
+                  onClick={() => openDrawer(item)}
+                  className="group flex flex-col overflow-hidden rounded-2xl bg-cream-base transition-shadow duration-300 hover:shadow-xl cursor-pointer"
                 >
                   <div className="relative aspect-[4/3] w-full overflow-hidden">
                     <Image
@@ -92,7 +95,7 @@ export default function MenuPage() {
                     </p>
                     <div className="mt-auto flex items-center justify-between pt-2">
                       <span className="font-serif text-lg font-bold text-oak-accent">
-                        ₹{item.price}
+                        ${item.price}
                       </span>
                       <span className="text-xs text-on-surface-variant">
                         {item.category}

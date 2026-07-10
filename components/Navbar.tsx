@@ -1,6 +1,8 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import { Menu } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '/' },
@@ -26,30 +28,28 @@ export default function Navbar() {
       }`}
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6">
-        <span className="font-serif text-2xl font-bold tracking-tight text-espresso-ink">
+        <Link href="/" className="font-serif text-2xl font-bold tracking-tight text-espresso-ink">
           Coffeestop
-        </span>
+        </Link>
         <div className="hidden items-center gap-8 sm:flex">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.href}
               href={link.href}
               className="text-sm font-medium text-on-surface-variant transition-colors hover:text-espresso-ink"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
-          <a
+          <Link
             href="/menu"
             className="rounded-full bg-espresso-ink px-5 py-2 text-sm font-medium text-cream-base transition-colors hover:bg-oak-accent"
           >
             Order Now
-          </a>
+          </Link>
         </div>
         <button className="flex items-center sm:hidden" aria-label="Menu">
-          <span className="material-symbols-outlined text-2xl text-espresso-ink">
-            menu
-          </span>
+          <Menu className="h-6 w-6 text-espresso-ink" />
         </button>
       </div>
     </nav>

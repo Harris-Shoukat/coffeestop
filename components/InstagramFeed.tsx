@@ -21,26 +21,20 @@ export default function InstagramFeed() {
             @coffeestop on Instagram
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-3 md:gap-4">
+        <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
           {images.map((src, i) => (
-            <a
+            <div
               key={i}
-              href="#"
               className="group relative aspect-square overflow-hidden rounded-xl"
             >
               <Image
                 src={src}
                 alt={`Instagram photo ${i + 1}`}
                 fill
-                sizes="(max-width: 768px) 50vw, 33vw"
+                sizes="(max-width: 768px) 33vw, 16vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-black/0 transition-all duration-300 group-hover:bg-black/40">
-                <span className="material-symbols-outlined scale-0 text-3xl text-cream-base transition-transform duration-300 group-hover:scale-100">
-                  favorite
-                </span>
-              </div>
-            </a>
+            </div>
           ))}
         </div>
       </div>
