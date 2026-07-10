@@ -17,6 +17,14 @@
   --font-sans: var(--font-dm-sans), sans-serif;
 }
 
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .material-symbols-outlined {
   font-family: "Material Symbols Outlined";
   font-weight: normal;

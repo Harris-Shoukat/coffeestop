@@ -34,7 +34,7 @@ const testimonials = [
 export default function Testimonials() {
   return (
     <section className="w-full bg-espresso-ink py-20 md:py-[120px]">
-      <div className="mx-auto max-w-[1280px] px-6">
+      <div className="mx-auto max-w-[1080px] px-6">
         <div className="mb-12 text-center">
           <span className="font-serif text-xs font-semibold uppercase tracking-[0.2em] text-oak-accent">
             Testimonials
@@ -43,11 +43,12 @@ export default function Testimonials() {
             What Our Community Says
           </h2>
         </div>
-        <div className="grid gap-6 md:grid-cols-4">
-          {testimonials.map((t) => (
+        <div className="overflow-x-auto px-6 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex gap-6">
+            {testimonials.map((t) => (
             <div
               key={t.name}
-              className="flex flex-col gap-4 rounded-2xl bg-cream-base/5 p-6 backdrop-blur-sm"
+              className="flex w-[80vw] shrink-0 snap-start flex-col gap-4 rounded-2xl bg-cream-base/5 p-6 backdrop-blur-sm sm:w-[45vw] lg:w-[300px]"
             >
               <div className="flex items-center gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
@@ -72,6 +73,7 @@ export default function Testimonials() {
               </div>
             </div>
           ))}
+          </div>
         </div>
       </div>
     </section>
