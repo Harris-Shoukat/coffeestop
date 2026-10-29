@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { getTranslations } from 'next-intl/server'
 
 const images = [
   'https://lh3.googleusercontent.com/aida-public/AB6AXuD3S2SUWEywg0DweUqMjs4MgO0dd1CSRO41zzuShnxDoh6paNAhS_kdB-LK6aD-320WCl2ncSHvrHnlgOVyjTtP5uecingh5yCs9Csu_lnyQDvyNs3PYXnURkiuixqLpuRFEhJNujc65gkpLjcS3UFgfA6CMke5Xboy8Jb1kNOj87ywkPwZfFiEB8uLCgFjc8LS45yy2Q5pGuArCU5faoIVGMhYA-AFvQJhurIPtQZewZcW7Qez8gBziw',
@@ -9,16 +10,18 @@ const images = [
   'https://lh3.googleusercontent.com/aida-public/AB6AXuAz8UWwmG5utHPdEkpVN2pWuc5xQMR5LkG1FyZNFGed36xwhNPPL9kgI-O4gFIUXoGs1MBqYIaqBjlRSYwG60Wd-7vyLTWtTya2aDHMuF31y7UtaXnyTM6gICUr0hKgtfqng_RZWgTSpdNvtfDxKG3TbJep8bHdUHta3Z1L9zGFGnSx1KdK8B4NpiU6ao2p8uRRfGWSFrIZEgqEDD0dHN1z6_pFErtWlZVHxG0mQLU6ZG0XdGM2d2qHyQ',
 ]
 
-export default function InstagramFeed() {
+export default async function InstagramFeed() {
+  const t = await getTranslations('home.instagram')
+
   return (
     <section className="w-full bg-cream-base py-20 md:py-[120px]">
       <div className="mx-auto max-w-[1280px] px-6">
         <div className="mb-12 text-center">
           <span className="font-serif text-xs font-semibold uppercase tracking-[0.2em] text-oak-accent">
-            Follow Us
+            {t('eyebrow')}
           </span>
           <h2 className="mt-3 font-serif text-3xl leading-tight text-espresso-ink md:text-4xl">
-            @coffeepoint on Instagram
+            {t('title')}
           </h2>
         </div>
         <div className="grid grid-cols-3 gap-2 md:grid-cols-6">
@@ -29,7 +32,7 @@ export default function InstagramFeed() {
             >
               <Image
                 src={src}
-                alt={`Instagram photo ${i + 1}`}
+                alt={`${t('imageAlt')} ${i + 1}`}
                 fill
                 sizes="(max-width: 768px) 33vw, 16vw"
                 className="object-cover transition-transform duration-500 group-hover:scale-110"

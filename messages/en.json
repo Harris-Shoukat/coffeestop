@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "title": "Coffeepoint",
+    "description": "A cozy coffee experience"
+  },
+  "common": {
+    "brand": "Coffeepoint",
+    "orderNow": "Order Now",
+    "viewAll": "View All",
+    "quantity": "Quantity",
+    "total": "Total",
+    "addToCart": "Add to Cart",
+    "decreaseQuantity": "Decrease quantity",
+    "increaseQuantity": "Increase quantity",
+    "closeDrawer": "Close drawer",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "nav": {
+    "home": "Home",
+    "menu": "Menu",
+    "story": "Story",
+    "contact": "Contact"
+  },
+  "home": {
+    "hero": {
+      "badge": "Welcome to Coffeepoint",
+      "titleLine1": "Where Every Sip",
+      "titleLine2": "Tells a Story",
+      "description": "Crafting exceptional coffee experiences with passion and precision. From bean to cup, every detail matters.",
+      "exploreMenu": "Explore Menu",
+      "ourStory": "Our Story",
+      "imageAlt": "Coffee shop interior with barista preparing coffee"
+    },
+    "features": {
+      "items": [
+        {
+          "emoji": "☕",
+          "title": "Premium Arabica Beans"
+        },
+        {
+          "emoji": "🌿",
+          "title": "Sustainably Sourced"
+        },
+        {
+          "emoji": "🥐",
+          "title": "Freshly Baked Pastries"
+        },
+        {
+          "emoji": "🎵",
+          "title": "Live Jazz Nights"
+        }
+      ]
+    },
+    "menuCategories": {
+      "eyebrow": "Our Menu",
+      "title": "Explore Our Categories",
+      "items": [
+        {
+          "slug": "breakfast",
+          "name": "Breakfast",
+          "alt": "Breakfast category"
+        },
+        {
+          "slug": "espresso",
+          "name": "Espresso",
+          "alt": "Espresso category"
+        },
+        {
+          "slug": "hand-brewed",
+          "name": "Hand-Brewed",
+          "alt": "Hand-Brewed category"
+        },
+        {
+          "slug": "pastries",
+          "name": "Pastries",
+          "alt": "Pastries category"
+        },
+        {
+          "slug": "seasonal",
+          "name": "Seasonal",
+          "alt": "Seasonal category"
+        }
+      ]
+    },
+    "highlights": {
+      "eyebrow": "Featured",
+      "title": "Customer Favorites",
+      "items": [
+        {
+          "name": "Flat White",
+          "description": "Smooth espresso with velvety microfoam",
+          "price": 350,
+          "rating": 4,
+          "tag": "Bestseller"
+        },
+        {
+          "name": "Avocado Toast",
+          "description": "Sourdough with fresh avocados & cherry tomatoes",
+          "price": 420,
+          "rating": 4,
+          "tag": "Popular"
+        },
+        {
+          "name": "Cold Brew",
+          "description": "24-hour steeped perfection, served cold",
+          "price": 380,
+          "rating": 5,
+          "tag": "Customer Favorite"
+        },
+        {
+          "name": "Pour Over",
+          "description": "Single-origin Ethiopian beans, slow-dripped",
+          "price": 450,
+          "rating": 4,
+          "tag": "Artisan"
+        }
+      ]
+    },
+    "story": {
+      "eyebrow": "Our Story",
+      "title": "From one machine to a full room",
+      "paragraph1": "Coffeepoint opened in 2010 in a quiet corner of the city with one espresso machine and a stubborn preference for good beans. The shop grew around that machine and the people who kept coming back.",
+      "paragraph2": "We buy our beans from sustainable farms in Ethiopia, Colombia, and Guatemala. Every roast is shaped around the character of the farm it came from.",
+      "quote": "Coffee is a language in itself.",
+      "author": "Jackie Chan",
+      "imageAlt": "Our cozy coffee shop interior"
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "What Our Community Says",
+      "items": [
+        {
+          "name": "Sarah M.",
+          "role": "Food Blogger",
+          "quote": "Best coffee in town! The pour-over selection is incredible, and the baristas really know their craft.",
+          "rating": 5
+        },
+        {
+          "name": "Emily R.",
+          "role": "Lifestyle Blogger",
+          "quote": "The ambiance is unmatched. I spend hours here working, and the cold brew keeps me going.",
+          "rating": 5
+        },
+        {
+          "name": "Jake T.",
+          "role": "Marketing Manager",
+          "quote": "Their flat white is my morning ritual. The quality is consistently excellent, and the staff is always welcoming.",
+          "rating": 4
+        },
+        {
+          "name": "Mike J.",
+          "role": "Software Engineer from Seattle",
+          "quote": "Finally found a coffee shop that rivals the best spots back home. The pour-over is next level — bold, clean, and absolutely delicious.",
+          "rating": 5
+        }
+      ]
+    },
+    "instagram": {
+      "eyebrow": "Follow Us",
+      "title": "@coffeepoint on Instagram",
+      "imageAlt": "Instagram photo"
+    }
+  },
+  "footer": {
+    "tagline": "Crafting exceptional coffee experiences since 2010. Every sip tells a story.",
+    "locationLabel": "Location",
+    "addressLine1": "123 Coffee Lane",
+    "addressLine2": "Brewtown, BC 10001",
+    "email": "hello@coffeepoint.com",
+    "phone": "+1 (555) 123-4567",
+    "quickLinksLabel": "Quick Links",
+    "home": "Home",
+    "menu": "Menu",
+    "ourStory": "Our Story",
+    "contact": "Contact",
+    "newsletterLabel": "Newsletter",
+    "newsletterText": "Get 10% off your first order when you subscribe.",
+    "emailPlaceholder": "Your email",
+    "subscribe": "Subscribe",
+    "copyright": "Coffeepoint. All rights reserved.",
+    "instagram": "Instagram",
+    "twitter": "Twitter",
+    "facebook": "Facebook"
+  }
+}

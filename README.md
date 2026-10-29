@@ -25,6 +25,7 @@ Coffeepoint is a responsive coffee shop website built with Next.js, TypeScript, 
 - TypeScript
 - Tailwind CSS 4
 - Framer Motion
+- next-intl for translations
 - Lucide React icons
 
 ## Getting started
@@ -70,15 +71,20 @@ components/
   Testimonials.tsx    Customer testimonials
 context/
   CartContext.tsx     Product drawer state
+i18n/
+  request.ts          next-intl request configuration
 lib/
   images.ts           Shared image URLs
   products.ts         Menu data and category helpers
+messages/
+  en.json             English translations
 public/
   l1.png              Logo
 ```
 
 ## Customizing the site
 
+- Edit English page copy in `messages/en.json`.
 - Edit menu items, prices, categories, and images in `lib/products.ts`.
 - Change brand colors and fonts in the `@theme` block in `app/globals.css`.
 - Update the site title and description in `app/layout.tsx`.

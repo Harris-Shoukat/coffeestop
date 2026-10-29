@@ -3,9 +3,11 @@
 import { useState, useEffect, startTransition } from 'react'
 import Image from 'next/image'
 import { X, Minus, Plus } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import { useCart } from '@/context/CartContext'
 
 export default function ProductDrawer() {
+  const t = useTranslations('common')
   const { selectedProduct, isDrawerOpen, closeDrawer } = useCart()
   const [quantity, setQuantity] = useState(1)
   const [animate, setAnimate] = useState(false)
@@ -49,7 +51,7 @@ export default function ProductDrawer() {
             <button
               onClick={closeDrawer}
               className="rounded-full p-2 text-on-surface-variant transition-colors hover:bg-espresso-ink/5 hover:text-espresso-ink"
-              aria-label="Close drawer"
+              aria-label={t('closeDrawer')}
             >
               <X className="h-5 w-5" />
             </button>
@@ -73,13 +75,13 @@ export default function ProductDrawer() {
 
             <div className="mb-6">
               <p className="mb-3 text-sm font-medium text-espresso-ink">
-                Quantity
+                {t('quantity')}
               </p>
               <div className="flex items-center gap-4">
                 <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="rounded-full border border-espresso-ink/20 p-2 text-espresso-ink transition-colors hover:bg-espresso-ink hover:text-cream-base"
-                  aria-label="Decrease quantity"
+                  aria-label={t('decreaseQuantity')}
                 >
                   <Minus className="h-4 w-4" />
                 </button>
@@ -89,7 +91,7 @@ export default function ProductDrawer() {
                 <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="rounded-full border border-espresso-ink/20 p-2 text-espresso-ink transition-colors hover:bg-espresso-ink hover:text-cream-base"
-                  aria-label="Increase quantity"
+                  aria-label={t('increaseQuantity')}
                 >
                   <Plus className="h-4 w-4" />
                 </button>
@@ -99,7 +101,9 @@ export default function ProductDrawer() {
 
           <div className="border-t border-espresso-ink/10 px-6 py-4">
             <div className="mb-4 flex items-center justify-between">
-              <span className="text-sm text-on-surface-variant">Total</span>
+              <span className="text-sm text-on-surface-variant">
+                {t('total')}
+              </span>
               <span className="font-serif text-2xl font-bold text-oak-accent">
                 ${totalPrice}
               </span>
@@ -110,7 +114,7 @@ export default function ProductDrawer() {
               }}
               className="w-full rounded-full bg-espresso-ink py-3 text-sm font-medium text-cream-base transition-colors hover:bg-oak-accent"
             >
-              Add to Cart
+              {t('addToCart')}
             </button>
           </div>
         </div>

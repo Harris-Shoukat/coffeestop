@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, DM_Sans } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getTranslations } from "next-intl/server";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import ProductDrawer from "@/components/ProductDrawer";
@@ -14,26 +16,34 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
-export const metadata: Metadata = {
-  title: "Coffeepoint",
-  description: "A cozy coffee experience",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("metadata");
 
-export default function RootLayout({
+  return {
+    title: t("title"),
+    description: t("description"),
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang={locale} className={`${playfair.variable} ${dmSans.variable}`}>
       <body
         suppressHydrationWarning
         className="bg-cream-base text-espresso-ink font-sans antialiased selection:bg-oak-accent selection:text-cream-base"
       >
-        <CartProvider>
-          {children}
-          <ProductDrawer />
-        </CartProvider>
+        <NextIntlClientProvider>
+          <CartProvider>
+            {children}
+            <ProductDrawer />
+          </CartProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

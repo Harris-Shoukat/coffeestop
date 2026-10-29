@@ -2,9 +2,12 @@
 
 import Image from 'next/image'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import { storyImage } from '@/lib/images'
 
 export default function OurStory() {
+  const t = useTranslations('home.story')
+
   return (
     <section id="story" className="w-full bg-cream-base py-20 md:py-[120px]">
       <div className="mx-auto grid max-w-[1280px] items-center gap-12 px-6 md:grid-cols-2">
@@ -17,7 +20,7 @@ export default function OurStory() {
         >
           <Image
             src={storyImage}
-            alt="Our cozy coffee shop interior"
+            alt={t('imageAlt')}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
@@ -33,27 +36,23 @@ export default function OurStory() {
           className="flex flex-col gap-6"
         >
           <span className="font-serif text-xs font-semibold uppercase tracking-[0.2em] text-oak-accent">
-            Our Story
+            {t('eyebrow')}
           </span>
           <h2 className="font-serif text-3xl leading-tight text-espresso-ink md:text-4xl">
-            From one machine to a full room
+            {t('title')}
           </h2>
           <p className="text-base leading-relaxed text-on-surface-variant">
-            Coffeepoint opened in 2010 in a quiet corner of the city with one
-            espresso machine and a stubborn preference for good beans. The shop
-            grew around that machine and the people who kept coming back.
+            {t('paragraph1')}
           </p>
           <p className="text-base leading-relaxed text-on-surface-variant">
-            We buy our beans from sustainable farms in Ethiopia, Colombia, and
-            Guatemala. Every roast is shaped around the character of the farm it
-            came from.
+            {t('paragraph2')}
           </p>
           <blockquote className="relative border-l-2 border-oak-accent pl-6">
             <p className="font-serif text-lg italic leading-relaxed text-espresso-ink">
-              &ldquo;Coffee is a language in itself.&rdquo;
+              &ldquo;{t('quote')}&rdquo;
             </p>
             <footer className="mt-3 text-sm font-medium text-on-surface-variant">
-              — Jackie Chan
+              — {t('author')}
             </footer>
           </blockquote>
         </motion.div>

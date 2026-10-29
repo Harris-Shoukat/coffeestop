@@ -4,18 +4,20 @@ import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Menu, X } from 'lucide-react'
+import { useTranslations } from 'next-intl'
 import logo from '@/public/l1.png'
 
-const navLinks = [
-  { label: 'Home', href: '/' },
-  { label: 'Menu', href: '/menu' },
-  { label: 'Story', href: '/#story' },
-  { label: 'Contact', href: '/contact' },
-]
-
 export default function Navbar() {
+  const t = useTranslations()
   const [scrolled, setScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const navLinks = [
+    { label: t('nav.home'), href: '/' },
+    { label: t('nav.menu'), href: '/menu' },
+    { label: t('nav.story'), href: '/#story' },
+    { label: t('nav.contact'), href: '/contact' },
+  ]
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20)
@@ -43,7 +45,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6">
         <Link href="/">
-          <Image src={logo} alt="Coffeepoint" className="h-14 w-auto sm:h-16" priority />
+          <Image src={logo} alt={t('common.brand')} className="h-14 w-auto sm:h-16" priority />
         </Link>
 
         <div className="hidden items-center gap-8 sm:flex">
@@ -60,14 +62,14 @@ export default function Navbar() {
             href="/menu"
             className="rounded-full bg-espresso-ink px-5 py-2 text-sm font-medium text-cream-base transition-colors hover:bg-oak-accent"
           >
-            Order Now
+            {t('common.orderNow')}
           </Link>
         </div>
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="flex items-center sm:hidden"
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isMenuOpen ? t('common.closeMenu') : t('common.openMenu')}
         >
           {isMenuOpen ? <X className="h-6 w-6 text-espresso-ink" /> : <Menu className="h-6 w-6 text-espresso-ink" />}
         </button>
@@ -94,7 +96,7 @@ export default function Navbar() {
             onClick={closeMenu}
             className="mt-3 rounded-full bg-espresso-ink px-5 py-3 text-center text-sm font-medium text-cream-base transition-colors hover:bg-oak-accent"
           >
-            Order Now
+            {t('common.orderNow')}
           </Link>
         </div>
       </div>

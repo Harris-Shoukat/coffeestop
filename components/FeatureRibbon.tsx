@@ -1,11 +1,12 @@
-const features = [
-  { emoji: '☕', title: 'Premium Arabica Beans' },
-  { emoji: '🌿', title: 'Sustainably Sourced' },
-  { emoji: '🥐', title: 'Freshly Baked Pastries' },
-  { emoji: '🎵', title: 'Live Jazz Nights' },
-]
+import { getTranslations } from 'next-intl/server'
 
-export default function FeatureRibbon() {
+export default async function FeatureRibbon() {
+  const t = await getTranslations('home.features')
+  const features = t.raw('items') as Array<{
+    emoji: string
+    title: string
+  }>
+
   return (
     <div className="w-full bg-espresso-ink py-5">
       <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-center gap-x-12 gap-y-3 px-6">
