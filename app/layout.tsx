@@ -15,7 +15,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Coffeestop",
+  title: "Coffeepoint",
   description: "A cozy coffee experience",
 };
 
@@ -26,7 +26,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
-      <body className="bg-cream-base text-espresso-ink font-sans antialiased selection:bg-oak-accent selection:text-cream-base">
+      <body
+        suppressHydrationWarning
+        className="bg-cream-base text-espresso-ink font-sans antialiased selection:bg-oak-accent selection:text-cream-base"
+      >
         <CartProvider>
           {children}
           <ProductDrawer />

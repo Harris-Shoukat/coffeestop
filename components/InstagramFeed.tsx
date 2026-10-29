@@ -18,7 +18,7 @@ export default function InstagramFeed() {
             Follow Us
           </span>
           <h2 className="mt-3 font-serif text-3xl leading-tight text-espresso-ink md:text-4xl">
-            @coffeestop on Instagram
+            @coffeepoint on Instagram
           </h2>
         </div>
         <div className="grid grid-cols-3 gap-2 md:grid-cols-6">

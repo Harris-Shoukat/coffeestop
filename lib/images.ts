@@ -1,0 +1,2 @@
+export const storyImage =
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuC8h2jujLKjdqOz2ckIcE-tICPLyDT07W7PNNiAnl1l1Cqqt2o-DE-nVVPRRB7Kr7swZDCsMlJC4QWSJjkhIa-rrmvX6sey5CrFzkAC8Y-9v86rIiq8GwiB_GgNPgGuPfwTHm0FagTdG3fGUdAkFrAzPnrywNQs7G4yYxs22R0kUttaZ-EWRN4gudIbmuplNlld9zX-_3cENi7mO8fIHNmKmLdVLgFpqLvp3JOrOZHajx1gk_3UqxgD_w'

@@ -10,7 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Menu', href: '/menu' },
   { label: 'Story', href: '/#story' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default function Navbar() {
@@ -43,7 +43,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-[1280px] items-center justify-between px-6">
         <Link href="/">
-          <Image src={logo} alt="Coffeestop" className="h-14 w-auto sm:h-16" priority />
+          <Image src={logo} alt="Coffeepoint" className="h-14 w-auto sm:h-16" priority />
         </Link>
 
         <div className="hidden items-center gap-8 sm:flex">
